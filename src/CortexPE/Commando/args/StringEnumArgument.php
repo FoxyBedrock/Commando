@@ -42,11 +42,12 @@ use function strtolower;
 abstract class StringEnumArgument extends BaseArgument {
 	protected const VALUES = [];
 
-	public function __construct(string $name, bool $optional = false) {
-		parent::__construct($name, $optional);
+    public function __construct(string $name, bool $optional = false)
+    {
+        parent::__construct($name, $optional);
 
-		$this->parameterData = CommandParameter::enum($name, new CommandHardEnum("", $this->getEnumValues()), 0, $optional);
-	}
+        $this->parameterData = CommandParameter::enum($name, new CommandHardEnum("", $this->getEnumValues()), 0, $optional);
+    }
 
 	public function getNetworkType(): int {
 		// this will be disregarded by PM anyways because this will be considered as a string enum

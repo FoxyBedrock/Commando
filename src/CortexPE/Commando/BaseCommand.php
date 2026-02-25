@@ -118,7 +118,7 @@ abstract class BaseCommand extends Command implements IArgumentable, IRunnable, 
 					if($msg === null) {
 						$sender->sendMessage(
 							$sender->getServer()->getLanguage()->translateString(
-								TextFormat::RED . "%commands.generic.permission"
+								TextFormat::RED . "%command.generic.permission"
 							)
 						);
 					} elseif(empty($msg)) {

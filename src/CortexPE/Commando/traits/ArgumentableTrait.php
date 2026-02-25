@@ -48,7 +48,7 @@ trait ArgumentableTrait{
 	private array $requiredArgumentCount = [];
 
 	/**
-	 * This is where all the arguments, permissions, sub-commands, etc would be registered
+	 * This is where all the arguments, permissions, sub-command, etc would be registered
 	 */
 	abstract protected function prepare() : void;
 
@@ -86,7 +86,7 @@ trait ArgumentableTrait{
 		];
 		// try parsing arguments
 		$required = count($this->requiredArgumentCount);
-		if(!$this->hasArguments() && count($rawArgs) > 0) { // doesnt take args but sender gives args anyways
+		if(!$this->hasArguments() && count($rawArgs) > 0) { // doesnt take arg but sender gives arg anyways
 			$return["errors"][] = [
 				"code" => BaseCommand::ERR_NO_ARGUMENTS,
 				"data" => []
