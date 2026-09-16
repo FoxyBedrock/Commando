@@ -1,4 +1,5 @@
 name: Commando
 main: CortexPE\Commando\Commando
 api: 5.0.0
-version: 0.0.11
+version: 3.3.0
+author: CortexPE
